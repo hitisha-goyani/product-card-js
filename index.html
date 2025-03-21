@@ -11,20 +11,36 @@
 </head>
 <body>
 <!----------------------------------------------------------navbar  section start--------------------------------------------------------------------------------------- -->
-    <nav class="navbar navbar-dark  fixed-top shadow-lg" style="background-color:#f7efec">
+    <nav class="navbar navbar-dark  fixed-top " style="background-color:#f7efec">
         <div class="container-fluid">
           <a class="navbar-brand text-dark" href="#">HG Mall</a>
 
-        <form id="search" class="d-flex mt-3" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchText">
-            <button class="btn " type="submit" style="background-color: #e6d4c6;" >Search</button>
-          </form>
+          <div class="d-flex ">
+            <div class="dropdown mt-3">
+              <button class="btn btn-secondary dropdown-toggle"  type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              All
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" onclick="all()">All Categories</a></li>
+                <li><a class="dropdown-item" onclick="electronics()">Electronics</a></li>
+                <li><a class="dropdown-item" onclick="mens()">Mens</a></li>
+                <li><a class="dropdown-item" onclick="womens()">Womens</a></li>
+                <li><a class="dropdown-item" onclick="jewelery()">Jewelery</a></li>
+              </ul>
+            </div>
+  
+            <form id="search" class="d-flex mt-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchText">
+              <button class="btn " type="submit" style="background-color: #e6d4c6;" >Search</button>
+            </form>
+
+          </div>
+       
 
           <input style="width: 200px;" class="form-control me-2 bg-light" type="search" placeholder="Search" aria-label="Search" id="advSearch" />
 
-          <button class="navbar-toggler border border-dark" style="background-color: #e6d4c6;"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-           
-             <i class="ri-shopping-cart-line text-dark"></i></span>
+          <button class="navbar-toggler border border-dark position-relative me-3" style="background-color: #e6d4c6;"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">  
+             <i class="ri-shopping-cart-line text-dark " id="count"></i></span>
           </button>
          
         </div>
@@ -84,12 +100,12 @@
 <!----------------------------------------------------------------modal section end---------------------------------------------------------------------------------------- -->
 
 
-    <div class="container p-3 rounded-2" style="margin-top:90px;background-color:#f7efec">
+    <div class="container-fluid p-3 rounded-2" style="margin-top:90px;background-color:#f7efec">
         <div class="row gx-4 ">
             <div class="col ">
 
                 <button onclick="all()" class="btn btn-sm mb-2 me-2 fs-6" style="background-color: #e6d4c6;" id="p">All</button>
-                <button onclick="electronics()" class="btn btn-sm mb-2 me-2 fs-6" style="background-color: #e6d4c6;">Electronicc</button>
+                <button onclick="electronics()" class="btn btn-sm mb-2 me-2 fs-6" style="background-color: #e6d4c6;">Electronics</button>
                 <button onclick="mens()" class="btn  btn-sm mb-2 me-2 fs-6" style="background-color: #e6d4c6;">Mens</button>
                 <button onclick="womens()" class="btn  btn-sm mb-2 me-2 fs-6" style="background-color: #e6d4c6;">Womens</button>
                 <button onclick="jewelery()" class="btn   btn-sm mb-2 me-2 fs-6" style="background-color: #e6d4c6;">Jewelery</button>
@@ -102,7 +118,7 @@
     </div>
     
 
-    <div class="container my-3">
+    <div class="container-fluid my-3">
         <div class="row  row-cols-1 row-cols-md-3 row-cols-lg-4 g-4"  id="row">
 
         </div>

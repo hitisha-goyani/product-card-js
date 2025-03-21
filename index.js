@@ -483,8 +483,8 @@ function show(data){
                     </div>
                     <hr>    
             <div class="text-center">
-                <a onclick="handleCart(${ele.id})" class="btn w-50 rounded-2" style="background-color:#dec7b5">Add to cart</a>
-                <a onclick="handleItem(${ele.id})" class="btn w-25 rounded-2" style="background-color:#dec7b5" data-bs-toggle="modal" data-bs-target="#exampleModal">More</a>
+                <a onclick="handleCart(${ele.id})" class="btn  rounded-2" style="background-color:#dec7b5">Add to cart</a>
+                <a onclick="handleItem(${ele.id})" class="btn  rounded-2" style="background-color:#dec7b5" data-bs-toggle="modal" data-bs-target="#exampleModal">More</a>
             </div>
         </div>
         </div>
@@ -561,6 +561,9 @@ function showCart(){
                     </span>` :` `
                   }</div>
               </div>`
+                  count.innerHTML=`
+
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:12px">${cart.length}</span>`
  }
 
 show(data)
