@@ -11,17 +11,17 @@
 </head>
 <body>
 <!----------------------------------------------------------navbar  section start--------------------------------------------------------------------------------------- -->
-    <nav class="navbar navbar-dark  fixed-top " style="background-color:#f7efec">
+    <nav class="navbar navbar-dark  fixed-top pb-3" style="background-color:#f7efec">
         <div class="container-fluid">
-          <a class="navbar-brand text-dark" href="#">HG Mall</a>
+          <a class="navbar-brand fw-semibold text-dark fs-5" href="#">HG Mall</a>
 
           <div class="d-flex ">
             <div class="dropdown mt-3">
-              <button class="btn btn-secondary dropdown-toggle"  type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <button class="btn  dropdown-toggle" style="background-color: #e6d4c6;"  type="button" data-bs-toggle="dropdown" aria-expanded="false">
               All
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" onclick="all()">All Categories</a></li>
+              <ul class="dropdown-menu" style="background-color:#f7efec">
+                <li><a class="dropdown-item" href="">All categories</a></li>
                 <li><a class="dropdown-item" onclick="electronics()">Electronics</a></li>
                 <li><a class="dropdown-item" onclick="mens()">Mens</a></li>
                 <li><a class="dropdown-item" onclick="womens()">Womens</a></li>
@@ -52,9 +52,6 @@
 
 
       <!----------------------------------------------------------offcanvas section start--------------------------------------------------------------------------------------- -->
-
-
-
 
       <div class="offcanvas offcanvas-end " style="background-color:#dec7b5" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
         <div class="offcanvas-header">
@@ -100,11 +97,14 @@
 <!----------------------------------------------------------------modal section end---------------------------------------------------------------------------------------- -->
 
 
-    <div class="container-fluid p-3 rounded-2" style="margin-top:90px;background-color:#f7efec">
+
+
+<!----------------------------------------------------------------all categories section start---------------------------------------------------------------------------------------- -->
+    <div class="container-fluid p-3 rounded-2" style="margin-top:70px;background-color: #e6d4c6;">
         <div class="row gx-4 ">
             <div class="col ">
 
-                <button onclick="all()" class="btn btn-sm mb-2 me-2 fs-6" style="background-color: #e6d4c6;" id="p">All</button>
+                <button onclick="all()" class="btn btn-sm mb-2 me-2 fs-6 " style="background-color: #e6d4c6;" id="p">All</button>
                 <button onclick="electronics()" class="btn btn-sm mb-2 me-2 fs-6" style="background-color: #e6d4c6;">Electronics</button>
                 <button onclick="mens()" class="btn  btn-sm mb-2 me-2 fs-6" style="background-color: #e6d4c6;">Mens</button>
                 <button onclick="womens()" class="btn  btn-sm mb-2 me-2 fs-6" style="background-color: #e6d4c6;">Womens</button>
@@ -117,12 +117,21 @@
         </div>
     </div>
     
+<!----------------------------------------------------------------all categories section end---------------------------------------------------------------------------------------- -->
 
-    <div class="container-fluid my-3">
+
+
+
+<!----------------------------------------------------------------main section start---------------------------------------------------------------------------------------- -->
+    <div class="container-fluid  my-3">
         <div class="row  row-cols-1 row-cols-md-3 row-cols-lg-4 g-4"  id="row">
 
         </div>
     </div>
+
+<!----------------------------------------------------------------main section end---------------------------------------------------------------------------------------- -->
+
+
 </body>
 <script src="index.js"></script>
 </html>

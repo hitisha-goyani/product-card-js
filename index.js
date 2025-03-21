@@ -281,8 +281,8 @@ function handleItem(id){
                       <div class="card-body  p-1"> 
                          <h6 class="card-title">${title}</h6> 
                            <div class="d-flex  justify-content-between my-2">
-                          <span class="badge text-bg-light">$ ${price}</span>
-                          <span class="badge text-bg-light">⭐ ${rating.rate}</span>
+                          <span class="badge text-dark">$ ${price}</span>
+                          <span class="badge text-dark">⭐ ${rating.rate}</span>
                         </div>
                            <p class="card-text mb-2">${category}</p>
                            <p class="card-text mb-2">${description}</p>
@@ -466,12 +466,12 @@ function show(data){
 
         row.innerHTML += `
         <div class="col">
-        <div class="card h-100  shadow-sm rounded-2 p-1  style="background-color:#f7efec">
+        <div class="card h-100  shadow-sm rounded-2 p-1"  style="background-color:#f7efec">
         <img src="${ele.image}" height="250px" class="card-img-top" alt="...">
         <div class="card-body">
             <h6 class="card-title">${ele.title}</h6>
             <p class="card-text">${ele.category}</p>
-            <p > $${ele.price}</p>
+            <p class="fw-semibold" > $${ele.price}</p>
            <div class="row">
            <div class="col-8"> 
                 <span class="badge ${ele.rating.count < 200 ? `text-bg-danger` : `text-bg-success`} mb-2"> ${ele.rating.count} </span>
