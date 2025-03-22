@@ -69,7 +69,19 @@ document.getElementById("login").addEventListener("submit" , function(el){
         passwoed:documnet.getElementById("password").value
     }
 
-    let log=regarr.some((ele) =>ele.email == obj.email && obj.password)
+    let log = regarr.some((ele) =>ele.usename == obj.usename && obj.password)
+    console.log(log)
+
+    if(log){
+
+        sessionStorage.setItem("login",JSON.stringify(obj))
+        location.href="index.html"
+    }
+
+    else{
+
+        alert("invalid crediantial")
+    }
 })
 
 </script>

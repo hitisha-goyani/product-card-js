@@ -42,12 +42,42 @@
           <button class="navbar-toggler border border-dark position-relative me-3" style="background-color: #e6d4c6;"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">  
              <i class="ri-shopping-cart-line text-dark " id="count"></i></span>
           </button>
+          <a onclick="logout()" class="btn btn-danger btn-sm p-2"  type="button">
+            <i class="ri-user-line me-1"></i>Logout
+          </a>
          
         </div>
       </nav>
 
 
       <!----------------------------------------------------------navbar  section end--------------------------------------------------------------------------------------- -->
+
+
+
+
+
+
+  <!-------------------------------------------------------- login modal section start -------------------------------------------------------->
+  <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="itembody">
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ <!-------------------------------------------------------- login modal section end-------------------------------------------------------->
+
+
 
 
 
@@ -72,6 +102,9 @@
       </div>
 
 <!----------------------------------------------------------offcanvas section end--------------------------------------------------------------------------------------- -->
+
+
+
 
 
 <!----------------------------------------------------------------modal section start---------------------------------------------------------------------------------------- -->
@@ -99,6 +132,7 @@
 
 
 
+
 <!----------------------------------------------------------------all categories section start---------------------------------------------------------------------------------------- -->
     <div class="container-fluid p-3 rounded-2" style="margin-top:70px;background-color: #e6d4c6;">
         <div class="row gx-4 ">
@@ -122,6 +156,7 @@
 
 
 
+
 <!----------------------------------------------------------------main section start---------------------------------------------------------------------------------------- -->
     <div class="container-fluid  my-3">
         <div class="row  row-cols-1 row-cols-md-3 row-cols-lg-4 g-4"  id="row">
@@ -130,6 +165,7 @@
     </div>
 
 <!----------------------------------------------------------------main section end---------------------------------------------------------------------------------------- -->
+
 
 
 </body>
