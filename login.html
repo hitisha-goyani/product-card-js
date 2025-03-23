@@ -28,7 +28,7 @@
 <section style="background-color: #e6d4c6;" >
     <div class="container mt-5 "style="padding: 150px 0px 150px 0px;" >
         <div style="max-width: 500px; background-color: #f7efec;" class=" rounded-3 shadow  mx-auto p-5">
-            <form id="registration p-5">
+            <form id="login">
                     <div class="mb-4 text-center" >
                         <h3>Login</h3>
                     </div>
@@ -36,7 +36,7 @@
                 
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Username:</label>
-                    <input required type="text" name="name" class="form-control" id="username" >
+                    <input required type="text" name="username" class="form-control" id="username" >
                   </div>
                 <div>
                 <div class="mb-3">
@@ -60,22 +60,22 @@
 
 let regarr = JSON.parse(localStorage.getItem("register")) || []
 
-document.getElementById("login").addEventListener("submit" , function(el){
+ document.getElementById("login").addEventListener("submit", function(el){
+     el.preventDefault();
 
-    el.preventDefault();
-
-    let obj ={
-        usename:document.getElementById("username").value,
-        passwoed:documnet.getElementById("password").value
+    let obj = {
+        username:document.getElementById("username").value,
+        password:document.getElementById("password").value
     }
 
-    let log = regarr.some((ele) =>ele.usename == obj.usename && obj.password)
+    let log = regarr.some((ele) =>ele.username == obj.username && obj.password)
     console.log(log)
 
     if(log){
 
         sessionStorage.setItem("login",JSON.stringify(obj))
-        location.href="index.html"
+        location.href = "index.html"
+        console.log(log)
     }
 
     else{
