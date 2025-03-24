@@ -249,7 +249,7 @@
 
   let cartBody = document.getElementById("cart-body")
 
-  let itembody = document.getElementById("itembody")
+
 
   let total = document.getElementById("total")
 
@@ -269,7 +269,10 @@
 
     let newItem = data.find((ele) => ele.id==id)
 
-    const {image, title, category, price, rating, description} = newItem
+    const { image, title, category, price, rating, description} = newItem
+    console.log(newItem)
+
+    let itembody = document.getElementById("itembody")
 
     itembody.innerHTML = `
           <div class="card h-100  shadow-sm rounded-2 p-1" style="background-color:#f7efec">
@@ -293,6 +296,8 @@
                     </div>
     `
   }
+
+
 
 
 
